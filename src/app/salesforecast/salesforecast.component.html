@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <style>
+        .btn-primary {
+            width: 200px;
+            height:50px;
+            border-radius: 30px;
+            border:none;
+        }
+        .sfhead{
+            font-size:40px;
+            font-weight:600;
+            color:yellow !important;
+        }
+        .bg-light{
+            background: linear-gradient(to right, purple, rgb(1, 1, 173));
+            border-radius:30px;
+            border:none;
+        }
+         .bg-info{
+            background: #333333;
+            background: -webkit-linear-gradient(to right, #dd1818, #333333);
+            background: linear-gradient(to right, #dd1818, #333333);
+            border:none;
+            background-size: cover;
+            height:100%
+        } 
+        </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark  fixed-top ">
+    
+    <div class="container-fluid">
+   
+      <a class="navbar-brand" href="#">
+        <span class="kaar">&nbsp;&nbsp;&nbsp;&nbsp;Sales</span><span class="megam">Forecast</span>
+      </a>
+    
+      <button routerLink="/home" class="btn btn-warning btn-lg me-5">
+        &nbsp;Logout&nbsp;
+      </button>
+    </div>
+  </nav>
+  <div class="container-fluid mt-5">
+
+  
+   <div class="container-fluid bg-info mt-5 p-5" align="center">
+
+  <div class="container pt-5">
+  <div class="container mt-5 p-5 col-xl-6 col-sm-8 col-10"><br><br><br>
+  <h3 class="text-center text-primary sfhead"> Sales Prediction </h3><br>
+  <form action="#" class="needs-validation" align="center">
+    <div class="form-floating mb-3 mt-3">
+        <input type="file" (change)="onFileSelected($event)" class="form-control" id="csv" placeholder="Upload your dataset" name="dset" required>
+        <!-- <input type="file" (change)="onFileSelected($event)"> -->
+
+        <label for="dset" class="form-label text-success formtit">Upload your dataset</label>
+    </div><br>
+    <!-- <div class="form-floating mb-3 mt-3">
+        <select class="form-select" id="sbg" name="sbg">
+            <option value="0">Select</option>
+            <option value="1">6 months</option>
+            <option value="2">1 year</option>
+            <option value="3">2 years</option>
+            <option value="4">3 years</option>
+            <option value="5">4 years</option>
+            <option value="6">5 years</option>
+        </select>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+        <label for="sbg" class="form-label text-success formtit">Select Time Period to predict</label>
+    </div><br> -->
+    <button type="submit" class="btn btn-primary text-center" (click)="navigateToGraph()">Predict Sales</button><br><br>
+</form>
+  </div>
+</div>
+</div>
+  </div>
+
+</body>
+</html>
